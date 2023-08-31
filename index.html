@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Put your own description here</title>
+    <title>LADance Planning website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
@@ -15,7 +15,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <div class="container-fluid header p-3">
-    <h1>Site name</h1>
+    <h1>LADance Planning Website</h1>
 </div>
 <nav class="navbar navbar-expand-lg px-3 py-2 mb-2">
     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -42,143 +42,178 @@
 <div class="container-lg">
 
     <h2>Brief</h2>
+    <p>I have been asked to develop a new website for my dance studio, which is LA Dance, located in Kelburn, Wellington. <br> My aims were to create a site that is easily navigated, along with having all the necessary information such as the timetable, what the school offers, as well as interesting things that will entice people to join. </p>
         <hr>
-    <h2>Boards and sprints</h2>
-        <hr>
-        <!-- Heading levels -->
-            <h3>Sprint One</h3>
-            <p>Plan</p>
-            <p>Boards</p>
-            <p>Link to the Canvas Page</p>
-            <p>Test</p>
-            <p>Reflect</p>
-        <hr>
-            <h3>Sprint Two</h3>
-            <p>Plan</p>
-            <p>Boards</p>
-            <p>Link to the Canvas Page</p>
-            <p>Test</p>
-            <p>Reflect</p>
-        <hr>
-    <h3>Images (landscape fits better than portrait)</h3>
-    <!-- one image -->
-    <div class="row mb-2">
-        <div class="col-md-12 my-2">
-            <img class="img-fluid mx-auto d-block my-2" src="assets/images/place_holder.png"> </div>
-        </div>
-    <!-- two images -->
+
+    <h1 style="color:black; text-align: center; font-size: 3em;"><u>Databases</u></h1>
+
+    <h3>Relevant Implications (Description)</h3>
+
+    <ul>
+        <li><h4>Privacy</h4>Privacy is not something we have been focussing on while creating this database, but the main thing is to not have the database directly accessible by the user. This means that the user cannot access the data directly through the website, or any web link. Through testing, I am able to see that this works, adn when I try and put in the link http://127.0.0.1:5000/data, it does not work. Users should not have to input any personal information that we do not need, to ensure that they're information feels as safe as possible. For example, there is no point asking the user for their home address or phone numbers, meaning we will not ask for this personal information. We also need to ensure that all of our passwords are hashed out, meaning that nobody is able to view it.</li>
+        <li><h4>Functionality</h4>One of the most important things about this database is that it works correctly, and that all data is consistent within each different cell in the tables. The foreign key references need to be very clear and well labelled, so, for example, the correct member is associated with the news post that they made.`The database being functional means making sure that it does not crash, whatever the input is, and all the dates and times are correct. The way that we can ensure our database will be functional at all times is by creating accurate entity diagrams, and constantly testing everything out to make sure there are no crashes.</li>
+        <li><h4>Sustainability and Future-Proofing</h4>These two essentially mean that the database is able to be maintained and changed easily in the future. For example, names, titles, dates, and times should all be changeable in one place, and if they need to be used in other tables, they need to be referenced using foreign keys. For example, two of the tables that I might make are for members and news, but I will somehow need to link these to ensure that only members can update, delete and add news items. This can be done through the foreign keys. This means that if their name is updated in one table, I do not need to go and change it in the other table. Overall, the databases should all be for different entities, for example, the dance class schedule needs to be in a different table to the news table. This makes everything easy to use, now and in the future, but it also ensures that we are able to add new tables very easily.</li>
+        <li><h4>End User Considerations</h4>End User Consideration means that the data in all of my website has to be presented in a way that is easily understandable for any user. This means it needs to be clearly formatted and the structure needs to be well organised, as well as being modern enough to reach the users expectations. When a user is entering details, into either a form or to sign in, they need to always be aware of what is going on, and if they enter an invalid email address or date, then the need to be shown that they had an error and what section it was under. This means that the users ability to sign in and interact with the website/database as easily as possible. </li>
+    </ul>
+
+    <hr>
+
+    <h2>Starting Design (Sprint One)</h2>
+    <p>This is the first design that I came up with when I was creating my first set of databases. It is two different tables that link with a foreign key, of the member_id. These tables are for my notices page, and are an important section as it ensures that people are kept up to date with the latest events and notices. My aim for this sprint was to create the base of the database, which was two tables that were linked to each other. In this sprint I also wanted to start building my news page, and incorporating the databases into it. The plan for creating these databases are down below. The photo on the right is what my project backlog was looking like for this section. Having project backlogs are very important as it helps us to lay everything out and see what we need to complete. This is so we do not miss or forget to do anything throughout the process.</p>
+
     <div class="row">
-        <div class="col-md-6 my-2">
-           <img class="img-fluid mx-auto d-block" src="assets/images/place_holder_sm.jpg">
+        <div class="col-md-6">
+            <img class="img-fluid" src="assets/images/First_design.jpg" alt="First Plan">
         </div>
-        <div class="col-md-6 my-2">
-            <img class="img-fluid mx-auto d-block" src="assets/images/place_holder_sm.jpg">
+        <div class="col-md-6">
+            <img class="img-fluid" src="assets/images/Project_Backlog_1.jpg" alt="Project Backlog">
         </div>
     </div>
-        <hr>
 
-    <h3>Video Test Example</h3>
-        <video controls>
-            <source src="assets/vids/littleTest.mp4" type="video/mp4">
+        <!-- Heading levels -->
+
+            <h4>Screenshots of a test sql query, and its output.</h4>
+<p> Testing was an important aspect when creating my database. Testing was used to ensure that I could extract information
+    out of the tables without any errors before I added it to my website. Below on the left you can see the code i used to extract
+    the news items out of my database and on the right is the output that was produced from my testing. This showed me that
+    i was able to pull out the information without any errors so my next step was to add this aspect to my website.
+</p>
+    <div class="row mb-3">
+        <div class="col-md-6 my-2">
+           <img class="img-fluid mx-auto d-block" src="assets/images/Testing_Code.jpg">
+        </div>
+        <div class="col-md-6 my-2">
+            <img class="img-fluid mx-auto d-block" src="assets/images/Testing_Output.jpg">
+        </div>
+    </div>
+    <hr>
+    <h4 style="text-align: center;">This is a video of how my news page works, and it shows how we can update, delete and add different news items. (PS. This was filmed after sprint two was created so the login page has already been created)</h4>
+<video controls>
+            <source src="assets/vids/News_Vid.mov" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-            molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-            vero eros et accumsan et iusto odio dignissim qui blandit praesent
-            luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-        </p>
+
+
+    <h3> Interesting code</h3>
+    <p> Creating of tables</p>
+
+    <pre style="font-size: 1em;"><code class="SQL">create table member(
+    member_id integer primary key autoincrement not null,
+    name text not null,
+    email text not null unique,
+    password text not null,
+    authorisation integer not null
+);
+
+create table news(
+    news_id integer primary key autoincrement not null,
+    title text not null unique,
+    subtitle text not null unique,
+    content text not null unique,
+    newsdate date not null ,
+    member_id integer not null,
+    foreign key(member_id) references member(member_id)
+);
+    </code></pre>
+
+
+    <h4>Reflection</h4>
+    <p>
+        <ul>
+    <li>After completing this sprint of my databases, one of the things that I was most pleased about was the fact that I was able to create workable buttons and pages for adding, updating and deleting news items. This means that users are able to change whatever they need, without having to go into the whole PyCharm console, and they are able to do everything straight through the website. This means that my website is very user friendly, and can be easily accesable to whoever needs it. </li>
+    <li>While I was working on this part fo my database, the one thing that I tried to complete was to make the cards separate. This means that what I would have liked to see was one separate light blue card for each news item, but because unfortunately I was not able to figure out how to do that, I just had to put a little break in between each one, which was not ideal. I think that if they were separate, it would have been easier for customers and members to read the page, and it would be more aesthetically pleasing. </li>
+    <li>Overall, while creating my database, there were many challenges, for example I came across an issue where even if I updated a news item, it wouldn;t show on website. Luckily I was able to get some help, and my problem was fixed, but the problem that I wasn't able to fix was the issue of the cards. Apart from that I was very happy with the result I got, but there was many more things that I needed to complete. In my next sprint, I need to create a login/logout page, to make sure that only members such as teachers were able to edit this page.</li>
+</ul>
+
+
+
         <hr>
-</div>
-<!-- -->
-<div class="container-lg mb-2">
-    <h2> Relevant Implications Summary</h2>
-    <!-- groovy bootstrap list -->
-    <ol class="list-group list-group-numbered">
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Content for list item
-            </div>
-            <span class="badge bg-primary rounded-pill">14</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Content for list item
-            </div>
-            <span class="badge bg-primary rounded-pill">14</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Content for list item
-            </div>
-            <span class="badge bg-primary rounded-pill">14</span>
-        </li>
-    </ol>
-    <hr>
+            <h2>Sprint Two</h2>
+    <p>What I wanted to focus on for this sprint was creating a login and logout system which will ensure that only people that are members of the dance page can edit things. In my last sprint, I focussed on the news table, and incorporating that into my website, but for this sprint, I need to focus on using the members table that I created in the last sprint, which has a foreign key linking the news and members table together. </p>
+
+    <div class="row mb-3">
+        <div class="col-md-6 my-2">
+           <img class="img-fluid mx-auto d-block" src="assets/images/Project_Backlog_2.jpg">
+        </div>
+        <div class="col-md-6 my-2">
+            <img class="img-fluid mx-auto d-block" src="assets/images/Logged_In.jpg">
+        </div>
+    </div>
+
+<h3>Project Backlog / Screenshots / Testing</h3>
+    <p>The photo above is an updated version of my project backlog, which once again, is very important is it allows us to have goals and follow those goals, without getting off track. The photo next to it is a screenshot of my page once someone has successfully logged in, which is necessary because everyone is now always aware of what is happening on their web page. In the video that I put above, during the first sprint, you can see that when you are not logged in, users are not able to edit the news page, but when users do log in, they are now able to see that they are logged in, as well as having the ability to update, add and delete news items. Something else that I also needed to do, as this was a form, with inputs that need to be valid, is make sure that there is some form of validation. In this case, it means making sure the email that was put in was a valid email, and from the images below, we can see that the program knows what a valid/invalid email address is, and it tells the user what they have done incorrectly. </p>
+<div class="row mb-3">
+        <div class="col-md-6 my-2">
+           <img class="img-fluid mx-auto d-block" src="assets/images/Valid_Email.jpg">
+        </div>
+        <div class="col-md-6 my-2">
+            <img class="img-fluid mx-auto d-block" src="assets/images/Invalid_Email.jpg">
+        </div>
+    </div>
+
+
+            <h4>Reflect</h4>
+    <ul>
+        <li>During this sprint, one of the things that I was most happy about, that I have already mentioned, is that my program is able to identify when there is an invalid email, and it i sable to report that information back to the user to make sure they are able to fix their mistakes. I think that this aspect of my web page is really important, because on other website where I am the user, if an error comes up but it does not tell me what the error is, it can be very hard to figure out, and I can get quite frustrated. This is why having clear instructions to users are very important.</li>
+        <li>Something that I would like to work on, or add to this part of my database is having a little icon on the side of where users enter their password, which means that they could have their password hidden or not. On most websites that have this, it is a little eye icon, and I think this would be great because if someone types their password in incorrectly, it means that they are able to see where their mistake was, and how they can fix it. Something else that I would also like to fix is the styling on this page, as right now it is very boring, and there is not much going on. </li>
+        <li>Overall, through this sprint, there were many challenges such as making sure my session variable was working, along with ensuring the whole member table was working in exactly the way that it needed to. Although there were still things that I would want to work on such as creating an eye icon, along with better styling, my next sprint is going to be focussed on something completely different. I want to create a new database that has all of my classes and their times in it, so then I am easily able to pick out certain days, to create a section on my notice page where it says what classes are on for the day. </li>
+    </ul>
+
+
+    <h2>Sprint Three</h2>
+    <p>As mentioned above, my aim for this sprint was to create a table that incorporated al of the available classes to create a schedule. I also wanted to use this information about the classes to create a section on my home page that displays all of the classes that are on for that day. This means that it is easily accessible for the user, and if they are looking for the classes for just the current day, they do not have to search throughout the website to find it. </p>
+
+    <div class="row mb-3">
+        <div class="col-md-6 my-2">
+           <img class="img-fluid mx-auto d-block" src="assets/images/Second_Design.jpg">
+        </div>
+        <div class="col-md-6 my-2">
+            <img class="img-fluid mx-auto d-block" src="assets/images/Project_Backlog_3.jpg">
+        </div>
+    </div>
+<h4>Plan / Project Backlog / Screenshots</h4>
+<p>As you can see from the photo above on the left, my design for this table is not related or linked to either of the previous tables at all. The photo on teh right shows my project backlog at this point, which once again, is very important for me to keep track of everything that I needed to complete, as well as feeling accomplished when I do complete a task and get to tick it off. From the photo below, we can see the testing that I have completed on this database, which I did complete on a Thursday. On the left, we can see what classes are on during a Thursday afternoon, and on the photo on the right, is the data that is pulled, and displayed on the home screen. As we can see, they match up, which shows me that my database is working just the way that it should. it was very important for me to test this out because for many users, the home page would be the main one that they would go on, so it very important that the information on here matches the information throughout the rest of the site. </p>
+
+    <div class="row mb-3">
+        <div class="col-md-6 my-2">
+           <img class="img-fluid mx-auto d-block" src="assets/images/Thursday_1.jpg">
+        </div>
+        <div class="col-md-6 my-2">
+            <img class="img-fluid mx-auto d-block" src="assets/images/Thursday_2.jpg">
+        </div>
+    </div>
+
+<h3> Interesting code</h3>
+    <p> Create new table</p>
+
+    <pre style="font-size: 1em;"><code class="SQL">create table classes(
+    class_id integer primary key autoincrement not null,
+    dayorder integer not null,
+    day text not null,
+    startdatetime date not null,
+    enddatetime date not null,
+    title text not null,
+    site text not null
+);
+    </code></pre>
+
+<h4>Reflection</h4>
+    <ul>
+        <li>Throughout creating this table for my database, one of my main focuses was to make sure that users were able to access the timetable as easily as possible, which is why I wanted to have the timetable for the day displayed on the home screen, meaning it is very easily accessible. In this timetable, there are also two days where there are not any classes on, which are Fridays and Sundays, and I wasn't sure how I was going to cope with this when it came to these days, but i have very happy to have been able to figure out how to display a message saying "There are no classes today".</li>
+        <li>One thing that I wanted to be able to deal with, but wasn't able to was the styling of this, and that no matter how many or little classes there were for the day, the blue section that I had allocated for this table was fixed. This means that sometimes there are large awkward gaps and empty spaces, that I wish I knew how to fix.</li>
+        <li>Overall, this part of my databases was something that I had wanted to do since I first created this website, so I am very pleased that I was able to accomplish it. As mentioned, I wish that there were some things I was able to fix throughout my website with the styling, and they way my information is presented, but overall I am very happy with the results that I achieved. If I were to continue working on this  in the future, one thing that I would want to do is add information to the classes page about what teacher is teaching which class, and maybe there could be a link on their name that takes you to my teachers page, so that users could find out more information about them if needed. But overall, I am very pleased with what I have created, even though there will always be more work to do. </li>
+    </ul>
+
+    <h3>Relevant Implications (Addressing)</h3>
+
+    <ul>
+        <li><h4>Privacy</h4>My database cannot be accessed through the link http://127.0.0.1:5000/data, which is important to keep everyones personal information private. If anyone where to try and put this link in their browser, it comes up with an error page saying "Not found", which is exactly what we want it to say. For the privacy of the members, we only ask them for the minimum amount of detail that we need, for example, we don't ask for their phone number or home address, as this information is not useful to us. We also make sure that when a member is entering their password in, it is hashed out so there is no way for other people to get access to their password or LA Dance account.</li>
+        <li><h4>Functionality</h4>Making sure that this site is as functional as possible is one of the most important things, and an example of that is by ensuring all my dates and timing had the structure "YYYY-MM-DD HH:MM:00". This meant that everything works simultaniously with each other and there are is no confusions or mix-ups. I also needed to make sure that I was testing regularly through the development process, which includes running test queries, and also checking the database consistently. This was to ensure that each set of information was only in the database once, and one way that I have done this was by making my fields unique whenever I could throughout the table creation process. Using the sql installer file has has helped me to feel confidant that the entries are able to be changed whenever needed, without causing any crashes, which is the most important part fo a database being functional.</li>
+        <li><h4>Sustainability and Future-Proofing</h4>Sustainability and Future-Proofing mean that my database is able to changed and updated whenever needed, and it is able to cope with any software updates that might occur in the future. One way that I have coped with this is by ensuring that all of my fields and entries are able to be updated and changed in one location, meaning that it is very easy to update. Something else that I needed to eb aware of was making sure that my tables stayed linked, which I have done using a foreign key, which connects the member table with the news table. This means that only people who are members are able to edit the news page. It was also important for me to ensure that new tables are able to be added to my database, so if something happened in the future or I had a new idea, I would be able to easily create a new one. I did this by using the sql installer file, and I am able to create or delete any tables that I need to.</li>
+        <li><h4>End User Considerations</h4>The information in my database is all presented through my website so it needs to be styled and organised to meet the needs of the user. When the user is entering information into a form, if something goes wrong it needs to be clearly communicated to them about what the issue is, and how they can solve it. One way that I did this was when they are entering their email address, if it is not a valid email, a message will appear and explain to them what went wrong. Overall, how I have incorporated end user considerationis by ensuring that the user is always aware of what is going on while they are entering information, as well as making my page aesthetically pleasing to the eye, and modern so that they user doesn't experience anything unexpected while using my webpage. </li>
+    </ul>
+
 </div>
 
-<div class="container-lg">
-<h2>Example code presentations</h2>
-    <p>These do not need to be used extensively but look great in the right place</p>
-    <!-- pre stands for pre-formatted and will render text as it appears in the htm code -->
-    <!-- this means extra line breaks appear hence the code starting with no spacings or line breaks-->
-<h3>Some SQL</h3>
-<pre style="font-size: 1em;"><code class="SQL">SELECT track_name as "Tracks",
-album_name as "Album", album_artist as "Artist" --Interesting comment
-FROM music_table
-WHERE track_name like "R%";</code></pre>
-<h3>Some Python</h3>
-<pre style="font-size: 1em;"><code class="Python"># interesting comment
-def review_fruit(l):
-    for x in l:
-        output = "{:&le; 10} -- {: &gt;4}".format(x[0], x[1])
-        print(output)
-    return None</code></pre>
-    <h3>Some CSS</h3>
-<pre style="font-size: 1em;">
-<code class="css">/* interesting comment */
-:root{
---base-back: rgb(150,150,150);
---black: rgb(0,0,0);
-}
-body{
-margin: 0;
-padding: 0;
-font-size: 100%;
-}</code></pre>
-<h3>Some HTML</h3>
-<!-- to present html code on an html coded web page raises an interesting problem -->
-<!-- the code needs to be converted into "escape" characters to handle the < and > -->
-<!-- there are online tools to do it https://codebeautify.org/html-escape-unescape -->
-<pre style="font-size: 1em;">
-<code class="html">&lt;!-- interesting comment --&gt;
-&lt;li class=&quot;list-group-item d-flex justify-content-between align-items-start&quot;&gt;
-&lt;div class=&quot;ms-2 me-auto&quot;&gt;
-    &lt;div class=&quot;fw-bold&quot;&gt;Subheading&lt;/div&gt;
-    Content for list item
-&lt;/div&gt;
-&lt;span class=&quot;badge bg-primary rounded-pill&quot;&gt;14&lt;/span&gt;
-&lt;/li&gt;
-</code>
-</pre>
-    <h3>Some Javascript (most likely will not need)</h3>
-<pre style="font-size: 1em;">
-<code class="javscript">function inBoundsCheck(xM, yM, x, y, w, h){
-    if( xM > x && xM < x+w && yM > y && yM < y+h){
-    // interesting comment
-        return true;
-    }else{
-        return false;
-    }
-}</code>
-</pre>
-</div>
 
-<footer> Your name </footer>
+<footer>Eva Tunnicliffe</footer>
