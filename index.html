@@ -25,13 +25,31 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 1</a>
+                <a class="nav-link" href="#p">Planning</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 2</a>
+                <a class="nav-link" href="#w1">Webpage 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 3</a>
+                <a class="nav-link" href="#w2">Webpage 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#w3">Webpage 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#d1">Database 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#d2">Database 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#d3">Database 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#t">Testing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#r">Relevant Implications</a>
             </li>
         </ul>
     </div>
@@ -45,20 +63,132 @@
     <p>I have been asked to develop a new website for my dance studio, which is LA Dance, located in Kelburn, Wellington. <br> My aims were to create a site that is easily navigated, along with having all the necessary information such as the timetable, what the school offers, as well as interesting things that will entice people to join. </p>
         <hr>
 
-    <h1 style="color:black; text-align: center; font-size: 3em;"><u>Databases</u></h1>
+    <h2> Link to user experience planning</h2>
+        <a class="" href="assets/Digital_Media_Outcome.pdf">
+        <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/First_page_UX_Design.png" alt="pic">
+        </a>
+
+
+
+    <h1>Main Webpage</h1>
+
+
 
     <h3>Relevant Implications (Description)</h3>
 
     <ul>
-        <li><h4>Privacy</h4>Privacy is not something we have been focussing on while creating this database, but the main thing is to not have the database directly accessible by the user. This means that the user cannot access the data directly through the website, or any web link. Through testing, I am able to see that this works, adn when I try and put in the link http://127.0.0.1:5000/data, it does not work. Users should not have to input any personal information that we do not need, to ensure that they're information feels as safe as possible. For example, there is no point asking the user for their home address or phone numbers, meaning we will not ask for this personal information. We also need to ensure that all of our passwords are hashed out, meaning that nobody is able to view it.</li>
-        <li><h4>Functionality</h4>One of the most important things about this database is that it works correctly, and that all data is consistent within each different cell in the tables. The foreign key references need to be very clear and well labelled, so, for example, the correct member is associated with the news post that they made.`The database being functional means making sure that it does not crash, whatever the input is, and all the dates and times are correct. The way that we can ensure our database will be functional at all times is by creating accurate entity diagrams, and constantly testing everything out to make sure there are no crashes.</li>
-        <li><h4>Sustainability and Future-Proofing</h4>These two essentially mean that the database is able to be maintained and changed easily in the future. For example, names, titles, dates, and times should all be changeable in one place, and if they need to be used in other tables, they need to be referenced using foreign keys. For example, two of the tables that I might make are for members and news, but I will somehow need to link these to ensure that only members can update, delete and add news items. This can be done through the foreign keys. This means that if their name is updated in one table, I do not need to go and change it in the other table. Overall, the databases should all be for different entities, for example, the dance class schedule needs to be in a different table to the news table. This makes everything easy to use, now and in the future, but it also ensures that we are able to add new tables very easily.</li>
-        <li><h4>End User Considerations</h4>End User Consideration means that the data in all of my website has to be presented in a way that is easily understandable for any user. This means it needs to be clearly formatted and the structure needs to be well organised, as well as being modern enough to reach the users expectations. When a user is entering details, into either a form or to sign in, they need to always be aware of what is going on, and if they enter an invalid email address or date, then the need to be shown that they had an error and what section it was under. This means that the users ability to sign in and interact with the website/database as easily as possible. </li>
+        <li><h4>Privacy</h4>The main thing that privacy is in the case of our webpage design is to not allow our users information to get leaked or anything like that. I have to ask the user some personal questions when they are completing the form to enrol, but I need to make sure that we only ask the questions and receive information that is necessary and will be useful. But I will not ask them any questions that are too personal or that I do not need. For example, I will not ask them for their address, as that is not my business and I do not need that information, but I will have to ask them for their names, emails and ages. It is important that this information stays private and no one else is able to access it, which is what I will hopefully use my database for. One of the main thing that I need to focus on for databases is not having the database directly accessible by the user. This means that the user cannot access the data directly through the website, or any web link. We also need to ensure that all of our passwords are hashed out, meaning that nobody is able to view it.</li>
+        <li><h4>Functionality</h4>One of the most important aspects of creating my web page is that it is functional and users are able to use it with ease. When relating it to the databases, the most important thing is that it works correctly, and that all data is consistent within each different cell in the tables. The foreign key references need to be very clear and well labelled, so, for example, the correct member is associated with the news post that they made.The database being functional means making sure that it does not crash, whatever the input is, and all the dates and times are correct. The way that we can ensure our database will be functional at all times is by creating accurate entity diagrams, and constantly testing everything out to make sure there are no crashes. This also includes making sure that all of my links and different pages flow well with each other and there are no issues when moving through each part of my webpage. </li>
+        <li><h4>Sustainability and Future-Proofing</h4>These two essentially mean that my web page along with my database is able to be maintained and changed easily in the future. For example, names, titles, dates, and times should all be changeable in one place, and if they need to be used in other tables, they need to be referenced using foreign keys. A way that I will incorporate this into my page is by two of the tables that I might make are for members and news, but I will somehow need to link these to ensure that only members can update, delete and add news items. This can be done through the foreign keys. This means that if their name is updated in one table, I do not need to go and change it in the other table. Overall, the databases should all be for different entities, for example, the dance class schedule needs to be in a different table to the news table. This makes everything easy to use, now and in the future, but it also ensures that we are able to add new tables very easily. My whole webpage needs to be commented well as if someone   else were to look at it, it is important that they understand what is going on at all times, to ensure that if anything goes wrong or they need to change something, they are able to. </li>
+        <li><h4>End User Considerations</h4>End User Consideration means that the information in all of my website has to be presented in a way that is easily understandable for any user. This means it needs to be clearly formatted and the structure needs to be well organised, as well as being modern enough to reach the users expectations. This is to ensure that the user doesn’t have any difficulty trying to navigate the site, and is able to enjoy their experience on my webpage. When a user is entering details, into either a form or to sign in, they need to always be aware of what is going on, and if they enter an invalid email address or date, then the need to be shown that they had an error and what section it was under. This means that the users ability to sign in and interact with the website/database as easily as possible. </li>
     </ul>
+<hr>
+    <h2 id="p">Planning </h2>
+    <h4>This is my project backlog captured part way through my project</h4>
+    <img class="img-fluid" src="assets/images/Project_backlog_Webpage.png">
 
+<hr>
+
+    <h3>General Brainstorming and Design Ideas</h3>
+<div class="row">
+    <div class="col-sm-6">
+        <img class="img-fluid" src="assets/images/First_Origional_Plan.jpg">
+    </div>
+    <div class="col-sm-6">
+        <img class="img-fluid" src="assets/images/Fiirst_Hard_Copy_Design.jpg">
+    </div>
+
+
+</div>
     <hr>
+<h1 id="w1" style="color: black; text-align: center; font-size: 3em"> <u>Webpage </u></h1>
+    <h2 >Starting Design (Sprint One)</h2>
+    <p>The aim for the first design that I came up with was just to get a home page fully styled and completed, which would then set the tone for the rest of my website. This included trialing different images and styles of text, while getting feedback from my teacher Mr K and my stakeholder, my dance teacher Lynlee Anne.</p>
 
-    <h2>Starting Design (Sprint One)</h2>
+    <img class="img-fluid" src="assets/images/First_Design_On_Page.png">
+<hr>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="img-fluid img-padding" src="assets/images/Index_Page.png">
+        </div>
+        <div class="col-sm-6">
+            <h3>Reflection</h3>
+        <p>The image above is the first design that I came up with, as you can see, the image does not sit nicely next to the next and section for the days classes and the about us information. As this was only my first design, and nothing was set in stone, I know that I was able to fiddle with it and change things around to ensure that everything sat the nicest on my page.<br><br> The image on the left is the current design that I have now, which has been adapted to ensure that everything looks and flows the best that it possibly can. I have gotten rid of the image next to the text, which has allowed for a better layout. Having a better layout means that users are able to understand and follow what is going on at all points throughout the page. At this point in time, everything was functional and I was able to move further into my project. </p>
+    </div>
+<hr>
+        <br>
+<h2 id="w2">Sprint Two (Flask)</h2>
+    <p>The aim for this sprint was to expand on my current webpage, and create the rest of my pages for my webpage. The pages that I want to include for this sprint are a classes/timetable page, and a teachers page. One of the most important things when trying to make a webpage look cohesive and profesional, is to sue flask. Flask helps us to create a base set of code, that will be identical for all the pages, making each page similar and ensuring that the user doesn't have any surprises while navigating my webpage. As well ask sorting out the flask aspect of it, I also needed to figure out the information going into both of these pages, as well as how I wanted to set it up. </p>
+<div class="row">
+    <div class="col-sm-6">
+        <img class="img-fluid img-padding" src="assets/images/Layout_Exemplar_Teachers.png">
+    </div>
+    <div class="col-sm-6">
+        <img class="img-fluid img-padding" src="assets/images/Layout_Exemplar_Classes.png">
+    </div>
+</div>
+
+    <h3> Interesting code</h3>
+
+        <pre style="font-size: 1em;"><code class="SQL">
+    from flask import Flask, render_template, request, redirect, url_for, session
+
+    app = Flask(__name__)
+
+    @app.route('/')
+    def index():
+        return render_template("index.html", day_classes=result);
+
+    @app.route('/classes')
+    def classes():
+        return render_template("classes.html", classes=result)
+
+    @app.route('/teachers')
+    def teachers():
+        return render_template("teachers.html")
+
+    @app.route('/enrol', methods=["GET", "POST"])
+    def enrol():
+        return render_template("enrol.html", **temp_form_data)
+
+    @app.route('/notices')
+    def notices():
+        return render_template("notices.html", news=result)
+    </code></pre>
+<h3>Reflection</h3>
+<p>As we can see from both screenshotted pages, the nav bar is identical and although from these two pictures we cannot compare the footers, this is also the same. I did this by creating a layout page of code, where I put everything that I wanted to be the same in. Which was basically just my nav and footer, but included all styles as well such as background colour and text colour. In the photo down below I have put some of the code that I used for flask. Because I used flask, I liked the way that everything looked and how ti all flowed together. This made it look more professional than any other webpage that I had made in the past few years. The pages in these images are new pages that I have created using flask, and I have designed them and put in all of the information so that they are now complete. Above is also some interesting code that I used to set up my flask program. At this point in my project I have completed three main pages using flask, and the next step is to create my enrollment form.</p>
+
+<hr>
+
+<h2 id="w3">Sprint Three (Enrollment form)</h2>
+    <p>The aim for this sprint was to create a well functioning form that users were able to express their interest in the dance studio. The questions that I need to ask included things such as their name, age, email address, and what their ability or previous experience of dance was. This is in order to ensure that the student is put into the correct lessons, and that I am able to contact the parents. As well as creating a functioning enrollment form, I also want to create a page that the site goes to when the user clicks submit. This is just a confirmation page to double check that all of the users information is correct. Validation will be really important in this sprint because the user is entering something in, and the computer has to be able to deal with invalid answers. </p>
+
+<h3 style="text-align: center"><u>Video</u></h3>
+        <p>The video below is of me using the enrollment form that I have created. You can see that it asks all of the necessary information, and when you reach the confirm page, you are able to either go back and edit your answers, or confirm them which takes you back to the home page. From this video you can also see the validation that I have included, which ensures that a proper email address is entered.  </p>
+
+        <video controls>
+            <source src="assets/vids/Login_Vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+<p style="text-align: center;">Here are two photos of my finished <b>project backlog</b> and my <b>git commit history.</b></p>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-fluid img-padding" src="assets/images/Finished_Project_Backlog.png">
+            </div>
+            <div class="col-sm-6">
+                <img class="img-fluid img-padding" src="assets/images/Git_Commit_History.png">
+            </div>
+        </div>
+
+<h3>Reflection</h3>
+        <p>Overall, we can see that I have achieved the goal that I had set out to do, which was to create a page where people were able to enrol and show interest in the dance school. There is validation that ensures that users put in correct details, and a confirm page to make sure that the user is happy with everything that they have entered. As of right now, this form does not go anywhere and nobody is really able to access it, so that is something that I would love to improve on and work on in the future. I would also liek to adjust how the images lay in my confirm page. But overall I am very happy with how everything turned out. </p>
+
+<hr>
+    <h1 id="d1" style="color:black; text-align: center; font-size: 3em;"><u>Databases</u></h1>
+
+    <h2 >Starting Design (Sprint One)</h2>
     <p>This is the first design that I came up with when I was creating my first set of databases. It is two different tables that link with a foreign key, of the member_id. These tables are for my notices page, and are an important section as it ensures that people are kept up to date with the latest events and notices. My aim for this sprint was to create the base of the database, which was two tables that were linked to each other. In this sprint I also wanted to start building my news page, and incorporating the databases into it. The plan for creating these databases are down below. The photo on the right is what my project backlog was looking like for this section. Having project backlogs are very important as it helps us to lay everything out and see what we need to complete. This is so we do not miss or forget to do anything throughout the process.</p>
 
     <div class="row">
@@ -128,7 +258,7 @@ create table news(
 
 
         <hr>
-            <h2>Sprint Two</h2>
+            <h2 id="d2">Sprint Two</h2>
     <p>What I wanted to focus on for this sprint was creating a login and logout system which will ensure that only people that are members of the dance page can edit things. In my last sprint, I focussed on the news table, and incorporating that into my website, but for this sprint, I need to focus on using the members table that I created in the last sprint, which has a foreign key linking the news and members table together. </p>
 
     <div class="row mb-3">
@@ -160,7 +290,7 @@ create table news(
     </ul>
 
 
-    <h2>Sprint Three</h2>
+    <h2 id="d3">Sprint Three</h2>
     <p>As mentioned above, my aim for this sprint was to create a table that incorporated al of the available classes to create a schedule. I also wanted to use this information about the classes to create a section on my home page that displays all of the classes that are on for that day. This means that it is easily accessible for the user, and if they are looking for the classes for just the current day, they do not have to search throughout the website to find it. </p>
 
     <div class="row mb-3">
@@ -204,16 +334,39 @@ create table news(
         <li>Overall, this part of my databases was something that I had wanted to do since I first created this website, so I am very pleased that I was able to accomplish it. As mentioned, I wish that there were some things I was able to fix throughout my website with the styling, and they way my information is presented, but overall I am very happy with the results that I achieved. If I were to continue working on this  in the future, one thing that I would want to do is add information to the classes page about what teacher is teaching which class, and maybe there could be a link on their name that takes you to my teachers page, so that users could find out more information about them if needed. But overall, I am very pleased with what I have created, even though there will always be more work to do. </li>
     </ul>
 
-    <h3>Relevant Implications (Addressing)</h3>
+
+<h3 id="t"><u>Testing</u></h3>
+        <p>Testing is one of the most important parts when creating a project like this, as I want to make my webpage as accessible to as many people as possible. This is to ensure that everything is functioning as well as possible, and to be aware of any changes that need to be made. <br>The first set of images are from a testing webpage which tests how long your page takes to load, and what percentage of your content makes up your site. As you can see below, my page takes 4.37 seconds to load, which isn't great because the ideal loading time for a web page is no more than two seconds. From the image enxt to it, we can see that one of the reasons this may be is because 99.74% of the content in my site are images. The reason for this is becuase when inserting images into my site, I did not compress any of them, meaning that they are all quite large file sizes. This is something that I would fix and change in the future, to ensure that my site loads faster.<br> Wave testing, which is the set of images below the pingdom ones, is used to test how accessible my site is and to allow more people with disabilities to access and understand it. It captures any errors that there might be in the design and layout of my page, and focuses on creating the website that best suits humans end user considerations. As you can see, my site has zero errors in its structure, which is very positive. You can see what the site would look like if it was unstyled, and as you can see it is not very nice. It is just good to see that I have done something right in my styling and the way that I have laid out my page. </p>
+<h4><b>Pingdom Testing</b></h4>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-fluid" src="assets/images/Pingdom_Test_1.jpg">
+            </div>
+            <div class="col-sm-6">
+                <img class="img-fluid" src="assets/images/Pingdom_Test_2.jpg">
+            </div>
+        </div>
+        <h4><b>Wave Testing</b></h4>
+    <div class="row">
+            <div class="col-sm-6">
+                <img class="img-fluid" src="assets/images/Wave_Test_1.png">
+            </div>
+            <div class="col-sm-6">
+                <img class="img-fluid" src="assets/images/Wave_Test_2.png">
+            </div>
+        </div>
+
+    <h3 id="r">Relevant Implications (Addressing)</h3>
 
     <ul>
-        <li><h4>Privacy</h4>My database cannot be accessed through the link http://127.0.0.1:5000/data, which is important to keep everyones personal information private. If anyone where to try and put this link in their browser, it comes up with an error page saying "Not found", which is exactly what we want it to say. For the privacy of the members, we only ask them for the minimum amount of detail that we need, for example, we don't ask for their phone number or home address, as this information is not useful to us. We also make sure that when a member is entering their password in, it is hashed out so there is no way for other people to get access to their password or LA Dance account.</li>
-        <li><h4>Functionality</h4>Making sure that this site is as functional as possible is one of the most important things, and an example of that is by ensuring all my dates and timing had the structure "YYYY-MM-DD HH:MM:00". This meant that everything works simultaniously with each other and there are is no confusions or mix-ups. I also needed to make sure that I was testing regularly through the development process, which includes running test queries, and also checking the database consistently. This was to ensure that each set of information was only in the database once, and one way that I have done this was by making my fields unique whenever I could throughout the table creation process. Using the sql installer file has has helped me to feel confidant that the entries are able to be changed whenever needed, without causing any crashes, which is the most important part fo a database being functional.</li>
-        <li><h4>Sustainability and Future-Proofing</h4>Sustainability and Future-Proofing mean that my database is able to changed and updated whenever needed, and it is able to cope with any software updates that might occur in the future. One way that I have coped with this is by ensuring that all of my fields and entries are able to be updated and changed in one location, meaning that it is very easy to update. Something else that I needed to eb aware of was making sure that my tables stayed linked, which I have done using a foreign key, which connects the member table with the news table. This means that only people who are members are able to edit the news page. It was also important for me to ensure that new tables are able to be added to my database, so if something happened in the future or I had a new idea, I would be able to easily create a new one. I did this by using the sql installer file, and I am able to create or delete any tables that I need to.</li>
-        <li><h4>End User Considerations</h4>The information in my database is all presented through my website so it needs to be styled and organised to meet the needs of the user. When the user is entering information into a form, if something goes wrong it needs to be clearly communicated to them about what the issue is, and how they can solve it. One way that I did this was when they are entering their email address, if it is not a valid email, a message will appear and explain to them what went wrong. Overall, how I have incorporated end user considerationis by ensuring that the user is always aware of what is going on while they are entering information, as well as making my page aesthetically pleasing to the eye, and modern so that they user doesn't experience anything unexpected while using my webpage. </li>
+        <li><h4>Privacy</h4>One of the ways that I incorporated privacy into my webpage was by only taking as little information as we could from the users, because I did not want to invade their privacy or run the risk of having confidential information leaked. For example, the page doesn’t ask for their phone number or home address, as this information is not useful to us. We also make sure that when a member is entering their password in, it is hashed out so there is no way for other people to get access to their password or LA Dance account. The database is also unable to be accessed by any normal user only certain people who have access to the site code are able to access it. Which also prevents information from being leaked. </li>
+        <li><h4>Functionality</h4>Making sure that this site is as functional as possible is one of the most important things, and an example of that is by ensuring all my dates and timing had the structure "YYYY-MM-DD HH:MM:00". This meant that everything works simultaneously with each other and there are is no confusions or mix-ups. I also needed to make sure that I was testing regularly through the development process, which includes running test queries, and also checking the database consistently. This was to ensure that each set of information was only in the database once, and one way that I have done this was by making my fields unique whenever I could throughout the table creation process. Using the sql installer file has has helped me to feel confidant that the entries are able to be changed whenever needed, without causing any crashes, which is the most important part of a database being functional. When relating it to the webpage as a whole, I needed to ensure that everything flowed correctly and easily, which I also did through testing. </li>
+        <li><h4>Sustainability and Future-Proofing</h4>Sustainability and Future-Proofing mean that my site is able to changed and updated whenever needed, and it is able to cope with any software updates that might occur in the future. One way that I have coped with this is by ensuring that all of my fields and entries are able to be updated and changed in one location, meaning that it is very easy to update. Something else that I needed to be aware of was making sure that my tables stayed linked, which I have done using a foreign key, which connects the member table with the news table. This means that only people who are members are able to edit the news page. It was also important for me to ensure that new tables are able to be added to my database, so if something happened in the future or I had a new idea, I would be able to easily create a new one. I did this by using the sql installer file, and I am able to create or delete any tables that I need to. I have also commented everything so that if me or anyone else were to come back to it in the future, I would be aware of everything going on. </li>
+        <li><h4>End User Considerations</h4>The information in my database is all presented through my website so it needs to be styled and organised to meet the needs of the user. When the user is entering information into a form, if something goes wrong it needs to be clearly communicated to them about what the issue is, and how they can solve it. One way that I did this was when they are entering their email address, if it is not a valid email, a message will appear and explain to them what went wrong. I have also ensured that everything flows correctly, and the colours are the same on each page, which I have done using the layout section of flask. This means that there is nothing unfamiliar for the user when they enter a new page, and that they are able to navigate my webpage without any trouble. Overall, how I have incorporated end user considerations by ensuring that the user is always aware of what is going on while they are entering information, as well as making my page aesthetically pleasing to the eye, and modern so that they user doesn't experience anything unexpected while using my webpage.</li>
     </ul>
 
 </div>
-
+   </div>
+</html>
 
 <footer>Eva Tunnicliffe</footer>

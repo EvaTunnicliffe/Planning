@@ -37,6 +37,13 @@ h1{
     color:white;
 }
 
+.img-padding{
+    padding: 1em;
+}
+
+
+
+
 footer{
     background-color: var(--base-back);
     text-align: center;
